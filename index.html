@@ -29,7 +29,7 @@
             </div>
         </div>
         <div id="header_main">
-            <div id="logo"><img src="./img/header_logo_dangibooks.png" alt="Logo"></div>
+            <div id="logo"><a href="#"><img src="./img/header_logo_dangibooks.png" alt="Logo"></a></div>
             <div id="dangi">
                 <select name="dangi" id="dangi">
                     <option value="#" selected>공단기</option>
@@ -60,42 +60,22 @@
     <main>
         <aside>
             <div id="Lside">
-                <div class="title_box">
-                    <h2>단기북스</h2>
-                </div>
-                <div class="list_box">
-                    <ul>
-                        <li>
-                            <div class="home" id="home">
-                                <a href="#"><span>홈</span></a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="all" id="all">
-                                <a href="#"><span>전체 교재</span></a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="bestList" id="bestList">
-                                <a href="#"><span>베스트셀러</span></a>
-                                <ul>
-                                    <li><a href="#">주간</a></li>
-                                    <li><a href="#">월간</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="event" id="event">
-                                <a href="#"><span>이벤트</span></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <ul>
+                    <li><span>단기북스</span></li>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">전체 교재</a></li>
+                    <li><a href="#">베스트셀러</a></li>
+                    <li><a href="#">주간</a></li>
+                    <li><a href="#">월간</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
             </div>
         </aside>
         <div id="main_content">
             <div id="slider">
                 <div id="slider_txt">
+                    <h2>공단기 <span style="color: rgba(0, 120, 224, 1);">Pick!</span> <br>추천 교재</h2>
+                    <p>단기북스 MD가<br>자신있게 추천하는 오늘의 책</p>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
@@ -116,8 +96,44 @@
                 </div>
             </div>
             <div id="search"></div>
-            <div id="best"></div>
-            <div id="banner"></div>
+            <div id="best">
+                <section>
+                    <h2><a href="#">공단기 베스트셀러 ></a></h2>
+
+                    <ul id="booktab">
+                        <li>월간</li>
+                        <li>주간</li>
+                    </ul>
+
+                    <article id="tab1">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </article>
+
+                    <article id="tab2">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </article>
+            </div>
+            <div id="banner">
+                <img src="./img/banner.png" alt="banner">
+            </div>
             <div id="new">
                 <h3>새로 나온 교재</h3>
                 <!-- Swiper -->
@@ -191,6 +207,7 @@
     <!-- Initialize Swiper -->
     <script src="./js/swiper.js"></script>
     <script src="./js/bookAPI.js"></script>
+    <script src="./js/tab.js"></script>
 </body>
 
 </html>

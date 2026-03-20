@@ -1,8 +1,9 @@
+// #new .swiper-slide
 async function bookData() {
     const params = new URLSearchParams({
-        target: "title",
-        query: "미움받을 용기",
-        size: 10
+        target: "publisher",
+        query: "에스티유니타스",
+        size: 25
     });
     const url = `https://dapi.kakao.com/v3/search/book?${params}`
 
@@ -33,10 +34,9 @@ async function bookData() {
 
             // 요소 생성 및 추가
             box.innerHTML = `<img src="${data.documents[i].thumbnail}">
-                    <h3>${data.documents[i].title}</h3>
+                    <h4>${data.documents[i].title}</h4>
                     <h6>${data.documents[i].authors}</h6>
                     <p>${data.documents[i].price}</p>
-                    <button>click</button>
                     `
         });
 
@@ -45,4 +45,81 @@ async function bookData() {
     }
 }
 
-bookData();
+
+
+
+//bsetSeller
+
+async function fetchBooks(query) {
+    const params = new URLSearchParams({
+        target: "title",
+        query,
+        size: 20
+    });
+    const url = `https://dapi.kakao.com/v3/search/book?${params}`;
+
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            Authorization: "KakaoAK 075f6cd693c270228fc9fc2c238a73cd"
+        }
+    });
+
+    if (!response.ok) {
+        throw new Error(`HTTP 오류: ${response.status}`);
+    }
+
+    return response.json();
+}
+
+async function bestData() {
+    try {
+        const queries = [
+            { query: "요리", sectionId: "tab1" },
+            { query: "축구", sectionId: "tab2" },
+        ];
+
+        for (const { query, sectionId } of queries) {
+            const data = await fetchBooks(query);
+            console.log(data)
+
+            // 해당 섹션 내의 .box 요소 8개 선택
+            const section = document.querySelector(`#${sectionId}`);
+            const boxElements = section.querySelectorAll(".box");
+
+            boxElements.forEach((box, i) => {
+                const doc = data.documents[i + 1];
+                if (!doc) return;
+
+                // 요소 생성 및 추가
+                box.innerHTML = `<img src="${data.documents[i].thumbnail}">
+                    <h4>${data.documents[i].title}</h4>
+                    <h6>${data.documents[i].authors}</h6>
+                    <p>${data.documents[i].price}</p>
+                    `
+            });
+        }
+    } catch (error) {
+        console.log('에러발생', error);
+    }
+}
+
+
+const tabItems = document.querySelectorAll('#booktab li');
+const tabs = document.querySelectorAll('article');
+
+tabItems.forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+        // 탭에 해당하는 리스트 보이고, 나머지는 숨기기
+        tabs.forEach((tab, j) => {
+            tab.style.display = (i === j) ? 'flex' : 'none';
+        });
+
+    });
+});
+
+
+window.addEventListener('load', () => {
+    bookData();
+    bestData();
+})
