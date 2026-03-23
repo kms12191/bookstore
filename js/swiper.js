@@ -1,24 +1,24 @@
-// #silder swiper
-var slider_swiper = new Swiper(".sliderSwiper", {
-    rewind: true,
-    navigation: {
-        nextEl: "#slider .swiper-button-next",
-        prevEl: "#slider .swiper-button-prev",
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    pagination: {
-        el: "#slider .swiper-pagination",
-    },
-});
+// // #silder swiper
+// var slider_swiper = new Swiper(".sliderSwiper", {
+//     rewind: true,
+//     navigation: {
+//         nextEl: "#slider .swiper-button-next",
+//         prevEl: "#slider .swiper-button-prev",
+//     },
+//     autoplay: {
+//         delay: 3000,
+//         disableOnInteraction: false,
+//       },
+//     pagination: {
+//         el: "#slider .swiper-pagination",
+//     },
+// });
 
 
 //new swiper
 var new_swiper = new Swiper(".newSwiper", {
     slidesPerView: 5,
-    rewind: true,
+    rewind: true, 
     spaceBetween: 20,
     pagination: {
         el: "#new .swiper-pagination",

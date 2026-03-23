@@ -95,7 +95,19 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <div id="search"></div>
+            <div id="search">
+                <h3>교재 검색</h3>
+                <select name="name" id="name">
+                    <option value="#" selected>교재명</option>
+                    <option value="#">저자명</option>
+                    <option value="#">출판사명</option>
+                    <option value="#">ISBN</option>
+                </select>
+                <div class="search_box">
+                    <input type="text" placeholder="저자명 / 과목명 검색">
+                    <button class="iconsearch" onclick="goSearch();"></button>
+                </div>
+            </div>
             <div id="best">
                 <section>
                     <h2><a href="#">공단기 베스트셀러 ></a></h2>
@@ -148,11 +160,11 @@
                         <div class="swiper-slide">Slide 7</div>
                         <div class="swiper-slide">Slide 8</div>
                         <div class="swiper-slide">Slide 9</div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
+                    </div>                    
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </main>

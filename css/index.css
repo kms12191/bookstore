@@ -15,7 +15,7 @@ header {
 #header_top {
     width: 100%;
     height: 45px;
-    background-color: #eee;
+    background-color: #e6e6e6;
 }
 
 #header_top .container {
@@ -94,22 +94,20 @@ nav ul {
 main {
     width: 1140px;
     height: 2230px;
-    background-color: brown;
     margin: 0 auto;
+    padding-top: 30px;
     display: flex;
 }
 
 aside {
     width: 210px;
     height: 100%;
-    background-color: yellow;
 }
 
 #Lside {
     width: 180px;
     height: 370px;
     border-radius: 8px;
-    background-color: darkolivegreen;
 }
 
 #Lside ul {
@@ -117,17 +115,25 @@ aside {
 }
 
 #Lside ul li:first-child {
-    height: 90px;
+    min-height: 90px;
+    padding: 30px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     background: linear-gradient(90deg, rgba(0, 120, 224, 1) 0%, rgba(13, 142, 255, 1) 98%);
 }
-
+#Lside ul li{
+    padding: 13px 20px;
+    font-weight: 600;
+}
 #Lside ul li:first-child span {
     font-size: 17px;
     font-weight: 700;
     color: #fff;
 }
+#Lside ul li:nth-of-type(5){padding-top: 5px; font-size: 13px;}
+#Lside ul li:nth-of-type(6){padding-top: 5px; font-size: 13px;}
 #Lside ul li:nth-of-type(5) a{color: #888;}
-#Lside ul li:nth-of-type(6) a{color: #888;}
+#Lside ul li:nth-of-type(6) a{padding-top: 5px; font-size: 13px; color: #888;}
 #Lside ul li:nth-of-type(7) {
     border-top: 1px solid #ddd;
 }
@@ -136,29 +142,76 @@ aside {
 #main_content {
     width: calc(100% - 210px);
     height: 100%;
-    background-color: aquamarine;
 }
 
 #slider {
     width: 100%;
     height: 390px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     display: flex;
-    background-color: cadetblue;
+}
+
+#slider .swiper-slide img{
+    width: 200px;
+    height: 275px;
+    object-fit: cover;
+}
+#slider .swiper-slide h3{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 17px;
+}
+#slider .swiper-slide h6{
+    text-align: left;
+    color: #a1a1a1;
+}
+
+#slider .swiper-slide p{
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+/* 불렛(이미지) 기본 스타일 */
+#slider .swiper-pagination-bullet {
+    width: 50px;
+    /* 이미지 크기에 맞게 조절 */
+    height: 70px;
+    border-radius: 2px;
+    /* 동그라미 해제 */
+    background: none;
+    /* 기본 배경색 제거 */
+    opacity: 0.5;
+    /* 비활성 상태 투명도 */
+}
+
+/* 활성화된 슬라이드의 불렛(이미지) 스타일 */
+#slider .swiper-pagination-bullet-active {
+    opacity: 1;
+    border: 2px solid blue;
+    /* 강조 효과 */
 }
 
 #slider_txt {
     width: 270px;
     height: 100%;
+    padding: 35px;
     position: relative;
-    background-color: gold;
 }
 
 #slider_txt h2 {
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #slider_txt p {
+    padding-top: 15px;
     font-size: 14px;
     color: #888;
 }
@@ -166,7 +219,7 @@ aside {
 #slider_txt .swiper-button-next {
     border: 1px solid #ddd;
     border-radius: 50%;
-    left: 135px;
+    left: 80px;
     right: auto;
     top: auto;
     bottom: 80px;
@@ -175,7 +228,7 @@ aside {
 #slider_txt .swiper-button-prev {
     border: 1px solid #ddd;
     border-radius: 50%;
-    left: 80px;
+    left: 30px;
     top: auto;
     bottom: 80px;
 }
@@ -186,8 +239,57 @@ aside {
     color: #888;
 }
 
+/* search */
+#search{
+    width: 100%;
+    height: 100px;
+    margin: 30px 0;
+    padding: 0 225px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #ebebeb ;
+}
+#search h3{
+    padding-right: 15px;
+}
+#search select{
+    width: 89px;
+    height: 37px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.search_box{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#search input{
+    width: 268px;
+    height: 37px;
+    border-radius: 5px;
+    padding-right: 40px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+    border: 1px solid #ddd;
+}
+.search_box .iconsearch{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background: url(/img/search.png) no-repeat center;
+    background-size: 15px;
+}
+
 /* best */
-#best section h2{display: flex; flex-direction: row; float: left;}
+#best section h2{float: left;}
 #booktab {
     margin: 10px;
     display: flex;
@@ -216,11 +318,42 @@ article {
     display: none;
 }
 
+#tab1 .box h4{
+    text-align: left;
+    font-size: 14px;
+}
+#tab1 .box h6{
+    font-size: 10px;
+    color: #888;
+    text-align: left;
+}
+#tab1 .box p{
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+}
+#tab2 .box h4{
+    text-align: left;
+    font-size: 14px;
+}
+#tab2 .box h6{
+    font-size: 10px;
+    color: #888;
+    text-align: left;
+}
+#tab2 .box p{
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+}
+
 .box {
     width: calc(18% - 10px);
     text-align: center;
     margin: 10px;
-    padding: 15px 30px;
+    padding: 15px 19px;
 }
 
 .box p {
@@ -245,9 +378,6 @@ article {
 
 .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 #new .swiper {
@@ -260,36 +390,65 @@ article {
 #banner img {
     width: 930px;
     height: 160px;
+    margin-bottom: 50px;
 }
 
 /* new */
 #new {
     width: 100%;
     height: 520px;
+    position: relative;
+
 }
 
 #new h3 {
+    width: 120px;
+    height: 25px;
+    margin: 20px 0;
     display: flex;
 }
 
 #new .swiper-slide {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
 }
+#new .swiper-slide h4{
+    text-align: left;
+    font-size: 14px;
+}
+#new .swiper-slide h6{
+    font-size: 10px;
+    color: #888;
+}
+#new .swiper-slide p{
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+}
+
 
 #new .swiper-button-next {
     border: 1px solid #e6e6e6;
-    left: 135px;
+    left: 886px;
     right: auto;
-    top: auto;
+    top: 0px;
     bottom: 80px;
 }
 
 #new .swiper-button-prev {
     border: 1px solid #e6e6e6;
-    left: 80px;
-    top: auto;
+    left: 843px;
+    top: 0px;
     bottom: 80px;
+}
+
+#new .swiper-pagination{
+    width: auto;
+    top: 0;
+    left: auto;
+    right: 100px;
 }
 
 #new .swiper-navigation-icon {
