@@ -63,9 +63,15 @@ header {
     margin-left: 5px;
 }
 #dangi select{
-    width: 80px; height: 40px; font-size: 20px; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 80px; 
+    height: 40px;
+    font-size: 17px; 
+    font-weight: bold; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#dangi select option{font-size: 15px;}
+#dangi select option{
+    font-size: 15px;
+}
 
 nav {
     width: 100%;
@@ -97,6 +103,7 @@ main {
     margin: 0 auto;
     padding-top: 30px;
     display: flex;
+    gap: 30px;
 }
 
 aside {
@@ -111,6 +118,8 @@ aside {
 }
 
 #Lside ul {
+    border-radius: 10px;
+    border: 1px solid #ededf3;
     font-family: sans-serif;
 }
 
@@ -133,9 +142,9 @@ aside {
 #Lside ul li:nth-of-type(5){padding-top: 5px; font-size: 13px;}
 #Lside ul li:nth-of-type(6){padding-top: 5px; font-size: 13px;}
 #Lside ul li:nth-of-type(5) a{color: #888;}
-#Lside ul li:nth-of-type(6) a{padding-top: 5px; font-size: 13px; color: #888;}
+#Lside ul li:nth-of-type(6) a{color: #888;}
 #Lside ul li:nth-of-type(7) {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ededf3;
 }
 
 
@@ -152,9 +161,17 @@ aside {
     display: flex;
 }
 
+#slider .swiper-slide{
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
 #slider .swiper-slide img{
+    margin-right: 10px;
     width: 200px;
     height: 275px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     object-fit: cover;
 }
 #slider .swiper-slide h3{
@@ -168,7 +185,15 @@ aside {
     text-align: left;
     color: #a1a1a1;
 }
-
+#slider .swiper-slide p:nth-of-type(1){
+    text-decoration: line-through;
+}
+#slider .swiper-slide p:nth-of-type(2):before{
+    content: "10%";
+    margin-right: 5px;
+    font-weight: bold;
+    color: rgba(0, 120, 224, 1);
+}
 #slider .swiper-slide p{
     text-align: left;
     font-family: sans-serif;
@@ -177,6 +202,10 @@ aside {
 }
 
 
+#slider .swiper-pagination{
+    top: auto;
+    bottom: 30px;
+}
 
 /* 불렛(이미지) 기본 스타일 */
 #slider .swiper-pagination-bullet {
@@ -284,7 +313,7 @@ aside {
     height: 20px;
     border: none;
     cursor: pointer;
-    background: url(/img/search.png) no-repeat center;
+    background: url(../img/search.png) no-repeat center;
     background-size: 15px;
 }
 
@@ -319,32 +348,44 @@ article {
 }
 
 #tab1 .box h4{
+    margin-bottom: 5px;
+    overflow: hidden;
+    width: 120px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
 }
 #tab1 .box h6{
+    margin-bottom: 15px;
     font-size: 10px;
     color: #888;
     text-align: left;
 }
 #tab1 .box p{
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     color: black;
 }
 #tab2 .box h4{
+    margin-bottom: 5px;
+    overflow: hidden;
+    width: 120px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
 }
 #tab2 .box h6{
+    margin-bottom: 15px;    
     font-size: 10px;
     color: #888;
     text-align: left;
 }
 #tab2 .box p{
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     color: black;
 }
@@ -414,8 +455,12 @@ article {
     align-items: flex-start;
 }
 #new .swiper-slide h4{
+    overflow: hidden;
+    width: 170px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
 }
 #new .swiper-slide h6{
     font-size: 10px;
@@ -423,43 +468,76 @@ article {
 }
 #new .swiper-slide p{
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     color: black;
 }
 
 
 #new .swiper-button-next {
+    width: 24px;
+    height: 24px;
     border: 1px solid #e6e6e6;
-    left: 886px;
+    left: 879px;
     right: auto;
     top: 0px;
     bottom: 80px;
 }
 
 #new .swiper-button-prev {
+    width: 24px;
+    height: 24px;
     border: 1px solid #e6e6e6;
-    left: 843px;
+    left: 855px;
     top: 0px;
     bottom: 80px;
 }
 
 #new .swiper-pagination{
+    font-size: 12px;
+
     width: auto;
-    top: 0;
+    top: -20px;
     left: auto;
-    right: 100px;
+    right: 80px;
 }
 
 #new .swiper-navigation-icon {
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
     color: #888;
 }
 
 #new .swiper-slide img {
     width: 100%;
     height: auto;
+}
+
+#side_bar{
+    min-width: 100px;
+    height: 155px;
+    padding: 10px;
+    position: sticky;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+#side_bar h6{
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+#side_bar ul{
+    min-height: 100px;
+    border: 1px solid #ddd;
+    font-size: 10px;
+    color: #C2CAD6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F6F9;
 }
 
 

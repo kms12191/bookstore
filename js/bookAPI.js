@@ -38,6 +38,7 @@ async function mainBookData() {
                 <h3>${data.documents[i].title}</h3>
                 <h6>${data.documents[i].authors}</h6>
                 <p>${data.documents[i].price}원</p>
+                <p>${data.documents[i].sale_price}원</p>
             </div>
                     `
         });
