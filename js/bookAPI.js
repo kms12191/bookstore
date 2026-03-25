@@ -37,7 +37,6 @@ async function mainBookData() {
             <div class='slider_content'>
                 <h3>${data.documents[i].title}</h3>
                 <h6>${data.documents[i].authors}</h6>
-                <p>${data.documents[i].price}원</p>
                 <p>${data.documents[i].sale_price}원</p>
             </div>
                     `
@@ -56,7 +55,7 @@ async function mainBookData() {
                 renderBullet: function (index, className) {
                     // 데이터가 있을 때만 이미지를 넣도록 예외 처리
                     const imgUrl = data.documents[index] ? data.documents[index].thumbnail : '';
-                    return `<img class="${className}" src="${imgUrl}" style="width:40px; height:auto; opacity:0.5;">`;
+                    return `<img class="${className}" src="${imgUrl}" style="width:40px; height:auto;">`;
                 },
             },
             autoplay: {
@@ -110,7 +109,7 @@ async function bookData() {
             box.innerHTML = `<img src="${data.documents[i].thumbnail}">
                     <h4>${data.documents[i].title}</h4>
                     <h6>${data.documents[i].authors}</h6>
-                    <p>${data.documents[i].price}원</p>
+                    <p>${data.documents[i].sale_price}원</p>
                     `
         });
 
@@ -167,9 +166,10 @@ async function bestData() {
 
                 // 요소 생성 및 추가
                 box.innerHTML = `<img src="${data.documents[i].thumbnail}">
+                    <div class="num">${i + 1}</div> 
                     <h4>${data.documents[i].title}</h4>
-                    <h6>${data.documents[i].authors}</h6>
-                    <p>${data.documents[i].price}원</p>
+                    <h6>${data.documents[i].authors}·${data.documents[i].publisher}</h6>
+                    <p>${data.documents[i].sale_price}원</p>
                     `
             });
         }
@@ -184,6 +184,13 @@ const tabs = document.querySelectorAll('article');
 
 tabItems.forEach((tab, i) => {
     tab.addEventListener('click', () => {
+        // 모든 탭 메뉴에서 'active' 클래스 제거
+        tabItems.forEach(item => {
+          item.classList.remove('active');
+        });
+
+        // 클릭한 탭 메뉴에만 'active' 클래스 추가
+        tab.classList.add('active');
         // 탭에 해당하는 리스트 보이고, 나머지는 숨기기
         tabs.forEach((tab, j) => {
             tab.style.display = (i === j) ? 'flex' : 'none';
