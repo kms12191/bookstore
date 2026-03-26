@@ -2,7 +2,7 @@
 async function mainBookData() {
     const params = new URLSearchParams({
         target: "title",
-        query: "모의고사",
+        query: "시험",
         size: 10
     });
     const url = `https://dapi.kakao.com/v3/search/book?${params}`;

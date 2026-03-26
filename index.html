@@ -7,8 +7,9 @@
     <title>단기 북스</title>
 
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/commom.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
@@ -31,7 +32,7 @@
         <div id="header_main">
             <div id="logo"><a href="#"><img src="./img/header_logo_dangibooks.png" alt="Logo"></a></div>
             <div id="dangi">
-                <select name="dangi" id="dangi">
+                <select name="dangi" id="top_menu">
                     <option value="#" selected>공단기</option>
                     <option value="#">기술단기</option>
                     <option value="#">소방단기</option>
@@ -64,7 +65,7 @@
                     <li><span>단기북스</span></li>
                     <li><a href="#">홈</a></li>
                     <li><a href="#">전체 교재</a></li>
-                    <li><a href="#">베스트셀러</a></li>
+                    <li><a href="./sub.html">베스트셀러</a></li>
                     <li><a href="#">주간</a></li>
                     <li><a href="#">월간</a></li>
                     <li><a href="#">이벤트</a></li>
@@ -118,6 +119,7 @@
                     </ul>
 
                     <article id="tab1">
+                        <h3 class="sr-only">월간 베스트셀러</h3>
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -131,6 +133,7 @@
                     </article>
 
                     <article id="tab2">
+                        <h3 class="sr-only">주간 베스트셀러</h3>
                         <div class="box"></div>
                         <div class="box"></div>
                         <div class="box"></div>
@@ -142,7 +145,9 @@
                         <div class="box"></div>
                         <div class="box"></div>
                     </article>
+                </section>
             </div>
+
             <div id="banner">
                 <img src="./img/banner.png" alt="banner">
             </div>
@@ -168,7 +173,7 @@
             </div>
         </div>
         <div id="side_bar">
-            <h6>최근 본 상품</h6>
+            <strong>최근 본 상품</strong>
             <ul>
                 <li>내역이<br>없습니다.</li>
             </ul>

@@ -9,6 +9,7 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/commom.css">
     <link rel="stylesheet" href="./css/sub.css">
 </head>
 
@@ -43,7 +44,7 @@
         <nav>
             <div class="container">
                 <ul>
-                    <li><a href="#">공단기 홈</a></li>
+                    <li><a href="./index.html">공단기 홈</a></li>
                     <li><a href="#">선생님</a></li>
                     <li><a href="#">수강신청</a></li>
                     <li><a href="#">수험정보</a></li>
@@ -58,10 +59,61 @@
     </header>
 
     <main>
-        
+        <div id="top_menu">
+            <ul>
+                <li><a href="#">공단기</a></li>
+                <li><a href="./index.html">단기북스</a></li>
+                <li><a href="#">영어</a></li>
+            </ul>
+        </div>
+
+        <section>
+            <div class="main_content">
+                <div class="book_content">
+                    <div class="main_book"></div>
+                    <div class="btn">
+                        <button><a href="#">크게보기</a></button>
+                        <button><a href="#">미리보기</a></button>
+                    </div>
+                </div>
+
+                <div id="price_menu">
+                    <div class="book_title"></div>
+                    <table>
+                        <tr>
+                            <td>판매가</td>
+                            <td class="pricenum"></td>
+                        </tr>
+                        <tr>
+                            <td>배송비</td>
+                            <td><strong>3,000원</strong><br>20,000원 이상 구매시 무료배송</td>
+                        </tr>
+                        <tr>
+                            <td>배송구분</td>
+                            <td>업체배송</td>
+                        </tr>
+                        <tr>
+                            <td>저자</td>
+                            <td class="author"></td>
+                        </tr>
+                    </table>
+                    <div class="total">
+                        <div class="total_txt">총 상품 금액</div>
+                        <div class="total_price">19,000원</div>
+                    </div>
+                    <div class="buy_btn">
+                        <button><a href="#">장바구니</a></button>
+                        <button><a href="#">바로 구매하기</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="new"></div>
+
     </main>
 
-        <footer>
+    <footer>
         <div class="container">
             <div class="link_box">
                 <div class="footer_menu">
@@ -103,5 +155,10 @@
             </div>
         </div>
     </footer>
+
+
+
+    <script src="./js/subbookAPI.js"></script>
 </body>
+
 </html>
