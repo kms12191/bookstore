@@ -50,12 +50,30 @@ main {
     top: 65px;
     left: 25%;
     position: relative;
-    display: block;
 }
 .btn{
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    top: 95px;
+    position: relative;
+    gap: 10px;
+}
+.btn button:nth-of-type(1){
+    width: 70px;
+    height: 30px;
+    border: 1px solid #ededf2;
+    border-radius: 5px;
+    font-size: 11px;
+    background-color: #fff;
+}
+.btn button:nth-of-type(2){
+    width: 85px;
+    height: 30px;
+    border: 1px solid #ededf2;
+    border-radius: 5px;
+    font-size: 11px;
+    background-color: #fff;
 }
 .book_title{
     /* width: 625px;
@@ -65,12 +83,178 @@ main {
 #price_menu{
     width: 625px;
     height: 530px;
-    background-color: darkkhaki;
+    padding-top: 8px;
+}
+
+.pricecontent{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.pricecontent p{
+    content: "10%";
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 120, 224, 1);
+}
+.pricecontent .salenum{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.pricecontent .pricenum{
+    font-size: 14px;
+    font-weight: 400;
+    color: #888;
+    text-decoration: line-through;
+}
+.checkbox{
+    width: 610px;
+    height: 55px;
+    padding: 0 10px;
+    margin: 20px 0;
+    border: 1px solid #ededf2;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.checkbox .check label input{
+    margin-right: 5px;
+}
+
+
+#price_menu table{
+    width: 600px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+#price_menu table td{
+    text-align: left;
+    padding: 6px 15px;
+}
+#price_menu table td:first-child{
+    width: 100px;
+}
+#price_menu table td:nth-of-type(2){
+    width: 500px;
+}
+
+.total{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.total .total_txt{
+    font-size: 14px;
+    font-weight: 600;
+}
+.total .salenum{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.buy_btn{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.buy_btn button:nth-of-type(1){
+    width: 300px;
+    height: 48px;
+    border: 1px solid #ededf2;
+    border-radius: 8px;
+}
+.buy_btn button:nth-of-type(1) a{
+    font-size: 14px;
+    font-weight: 500;
+}
+.buy_btn button:nth-of-type(2){
+    width: 300px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0, 120, 224, 1);
+}
+.buy_btn button:nth-of-type(2) a{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
 }
 
 #new{
     width: 1185px;
     height: 180px;
     background-color: yellow;
+}
+
+
+#bookcontent{
+    display: flex;
+    justify-content: space-between;
+}
+#bookcontent section{
+    width: 750px; 
+    height: 350px; 
+    margin-right: 30px;
+    margin: 0 auto; 
+    position: relative;
+}
+.tab_menu{
+    width: 750px;
+    display: flex; 
+    justify-content: center; 
+    position: relative; 
+    z-index: 2;
+}
+.tab_menu li{
+    width: 200px; 
+    line-height: 50px; 
+    border: 1px solid #aaa; 
+    text-align: center; 
+    border-bottom: 0;
+}
+.active{
+    background-color: #eee; 
+    border-bottom: 1px solid #eee;
+}
+.tabcontent{
+    width: 750px; 
+    height: 300px; 
+    margin-right: 30px;
+    position: absolute; 
+    left: 0; 
+    bottom: 0.5px; 
+    background-color: #eee; 
+    border-top: 1px solid #aaa;
+}
+.tabcontent button{
+    position: absolute; 
+    left: 50%; 
+    bottom: 0; 
+    transform: translateX(-50%); 
+    z-index: 2; 
+    width: 95%; 
+    height: 40px;
+}
+
+#bookcontent .totalcon .contextbox{
+    width: 750px;
+    /* height: 2820px; */
+    position: relative;
+    padding-right: 30px;
+}
+#side_bar{
+    min-width: 360px;
+    height: 235px;
+    padding: 10px;
+    position: sticky;
+    top: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
