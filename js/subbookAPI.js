@@ -24,7 +24,7 @@ async function mainBook() {
 
                 // 요소 선택
                 const mainBox = document.querySelector(".main_book");
-                const bookTitle = document.querySelector(".book_title")
+                const bookTitle = document.querySelectorAll(".book_title")
                 const contextBox = document.querySelector(".contextbox");
                 const priceNum = document.querySelector(".pricenum");
                 const personAut = document.querySelector(".author");
@@ -42,17 +42,20 @@ async function mainBook() {
                 // 요소 생성 및 추가
                 mainBox.innerHTML = `<img src="${thumbnail}">`
 
-                bookTitle.innerHTML = `<h3>${title}</h3>`
+                bookTitle[0].innerHTML = `<h3>${title}</h3>`
+                bookTitle[1].innerHTML = `<h3>${title}</h3>`
                 priceNum.textContent += price.toLocaleString() + "원";
                 saleNum[0].textContent += sale_price.toLocaleString() + "원";
                 personAut.textContent += authors;
                 pubEl.textContent += publisher;
                 saleNum[1].textContent += (sale_price + 3000).toLocaleString() + "원";
+                saleNum[2].textContent += (sale_price + 3000).toLocaleString() + "원";
                 
 
                 contextBox.innerHTML = `<p>${authors[0]}</p>
+                <br>
                 <p>${contents}</p>
-                <span>자세히보기</span>
+                <img src="../img/bookmain.jpg" alt="책 메인이미지">
                 `
             } catch (error) {
                 console.log('에러발생', error);
@@ -102,7 +105,7 @@ tabMenu.forEach((tm, i) => {
     tabContent.forEach((tc, j) => {
       tc.style.display = (i === j) ? 'flex' : 'none';
       tab.style.height = '350px';
-      tc.style.height = '300px';
+      tc.style.height = '295px';
       btns[i].innerText = '더보기'
     });
   });
@@ -112,9 +115,9 @@ tabMenu.forEach((tm, i) => {
 btns.forEach(btn => {
   btn.addEventListener('click', () => {
     if (btn.textContent == '더보기') {
-      tab.style.height = '2820px';
+      tab.style.height = '2780px';
       tabContent.forEach(tc => {
-        tc.style.height = '2820px';
+        tc.style.height = '2728px';
       });
       btn.innerText = '접기'
     } else {
@@ -126,3 +129,17 @@ btns.forEach(btn => {
     }
   });
 });       
+
+
+
+//swiper//
+var swiper = new Swiper(".newSwiper", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      freeMode: true,
+      rewind: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });

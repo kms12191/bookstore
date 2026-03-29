@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/commom.css">
     <link rel="stylesheet" href="./css/sub.css">
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -123,22 +125,40 @@
             </div>
         </section>
 
-        <div id="new"></div>
+        <div id="new">
+            <!-- Swiper -->
+            <div class="swiper newSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 10</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
 
 
         <div id="bookcontent">
             <div class="totalcon">
                 <div class="tabs">
                     <ul class="tab_menu">
-                        <li class="active">tab1</li>
-                        <li>tab2</li>
+                        <li class="active">상품 설명</li>
+                        <li>기본정보</li>
                     </ul>
                     <div class="tabcontent">
                         <div class="contextbox"></div>
                         <button>더보기</button>
                     </div>
                     <div class="tabcontent">
-                        내용2
+                        기본정보
                         <button>더보기</button>
                     </div>
                 </div>
@@ -148,7 +168,19 @@
             <div id="side_bar">
                 <div class="booktitle"></div>
                 <ul>
-                    <li></li>
+                    <li>
+                        <div class="book_title"></div>
+                    </li>
+                    <li>
+                        <div class="total">
+                            <div class="total_txt">총 상품 금액</div>
+                            <div class="salenum"></div>
+                        </div>
+                        <div class="buy_btn">
+                            <button><a href="#">장바구니</a></button>
+                            <button><a href="#">바로 구매하기</a></button>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>

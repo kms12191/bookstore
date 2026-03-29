@@ -9,49 +9,55 @@ main {
 }
 
 /* top_menu */
-#top_menu{
+#top_menu {
     width: 150px;
     height: 20px;
     margin: 10px 0;
 }
-#top_menu ul{
+
+#top_menu ul {
     display: flex;
     justify-content: space-around;
     font-family: sans-serif;
     font-size: 13px;
 }
-#top_menu ul li::after{
+
+#top_menu ul li::after {
     content: ' >';
 }
-#top_menu ul li:last-child:after{
+
+#top_menu ul li:last-child:after {
     content: '';
 }
-#top_menu ul li a{
+
+#top_menu ul li a {
     color: #121212;
 }
 
 /* main_menu */
-.main_content{
+.main_content {
     width: 1140px;
     height: 530px;
     display: flex;
     justify-content: space-between;
 }
-.book_content{
+
+.book_content {
     width: 500px;
     height: 530px;
     border-radius: 8px;
     background: #f6f6f9;
 }
 
-.main_book img{
+.main_book img {
     width: 250px;
     height: 345px;
     top: 65px;
     left: 25%;
     position: relative;
 }
-.btn{
+
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +65,8 @@ main {
     position: relative;
     gap: 10px;
 }
-.btn button:nth-of-type(1){
+
+.btn button:nth-of-type(1) {
     width: 70px;
     height: 30px;
     border: 1px solid #ededf2;
@@ -67,7 +74,8 @@ main {
     font-size: 11px;
     background-color: #fff;
 }
-.btn button:nth-of-type(2){
+
+.btn button:nth-of-type(2) {
     width: 85px;
     height: 30px;
     border: 1px solid #ededf2;
@@ -75,41 +83,46 @@ main {
     font-size: 11px;
     background-color: #fff;
 }
-.book_title{
+
+.book_title {
     /* width: 625px;
     height: 30px; */
 }
 
-#price_menu{
+#price_menu {
     width: 625px;
     height: 530px;
     padding-top: 8px;
 }
 
-.pricecontent{
+.pricecontent {
     margin: 20px 0;
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.pricecontent p{
+
+.pricecontent p {
     content: "10%";
     font-size: 20px;
     font-weight: 600;
     color: rgba(0, 120, 224, 1);
 }
-.pricecontent .salenum{
+
+.pricecontent .salenum {
     font-size: 20px;
     font-weight: 600;
     color: black;
 }
-.pricecontent .pricenum{
+
+.pricecontent .pricenum {
     font-size: 14px;
     font-weight: 400;
     color: #888;
     text-decoration: line-through;
 }
-.checkbox{
+
+.checkbox {
     width: 610px;
     height: 55px;
     padding: 0 10px;
@@ -122,132 +135,197 @@ main {
     font-size: 14px;
     font-weight: 500;
 }
-.checkbox .check label input{
+
+.checkbox .check label input {
     margin-right: 5px;
 }
 
 
-#price_menu table{
+#price_menu table {
     width: 600px;
     margin: 20px 0;
     font-size: 14px;
 }
-#price_menu table td{
+
+#price_menu table td {
     text-align: left;
     padding: 6px 15px;
 }
-#price_menu table td:first-child{
+
+#price_menu table td:first-child {
     width: 100px;
 }
-#price_menu table td:nth-of-type(2){
+
+#price_menu table td:nth-of-type(2) {
     width: 500px;
 }
 
-.total{
+.total {
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
 }
-.total .total_txt{
+
+.total .total_txt {
     font-size: 14px;
     font-weight: 600;
 }
-.total .salenum{
+
+.total .salenum {
     font-size: 23px;
     font-weight: 600;
 }
 
-.buy_btn{
+.buy_btn {
     margin: 20px 0;
     display: flex;
     justify-content: space-around;
 }
-.buy_btn button:nth-of-type(1){
+
+.buy_btn button:nth-of-type(1) {
     width: 300px;
     height: 48px;
     border: 1px solid #ededf2;
     border-radius: 8px;
 }
-.buy_btn button:nth-of-type(1) a{
+
+.buy_btn button:nth-of-type(1) a {
     font-size: 14px;
     font-weight: 500;
 }
-.buy_btn button:nth-of-type(2){
+
+.buy_btn button:nth-of-type(2) {
     width: 300px;
     height: 48px;
     border: none;
     border-radius: 8px;
     background-color: rgba(0, 120, 224, 1);
 }
-.buy_btn button:nth-of-type(2) a{
+
+.buy_btn button:nth-of-type(2) a {
     font-size: 14px;
     font-weight: 500;
     color: #fff;
 }
 
-#new{
-    width: 1185px;
+#new {
+    width: 1140px;
     height: 180px;
     background-color: yellow;
 }
 
+.swiper {
+    width: 100%;
+    height: 100%;
+}
 
-#bookcontent{
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#bookcontent {
     display: flex;
     justify-content: space-between;
 }
-#bookcontent section{
-    width: 750px; 
-    height: 350px; 
+
+#bookcontent section {
+    width: 750px;
+    height: 350px;
     margin-right: 30px;
-    margin: 0 auto; 
+    margin: 0 auto;
     position: relative;
 }
-.tab_menu{
+
+
+.tab_menu {
     width: 750px;
-    display: flex; 
-    justify-content: center; 
-    position: relative; 
+    display: flex;
+    justify-content: center;
+    position: relative;
     z-index: 2;
 }
-.tab_menu li{
-    width: 200px; 
-    line-height: 50px; 
-    border: 1px solid #aaa; 
-    text-align: center; 
+
+.tab_menu li {
+    width: 200px;
+    line-height: 50px;
+    border: 1px solid #aaa;
+    text-align: center;
     border-bottom: 0;
 }
-.active{
-    background-color: #eee; 
+
+/* .tabs .tabcontent2{
+    display: none;
+} */
+.active {
+    background-color: #eee;
     border-bottom: 1px solid #eee;
 }
-.tabcontent{
-    width: 750px; 
-    height: 300px; 
-    margin-right: 30px;
-    position: absolute; 
-    left: 0; 
-    bottom: 0.5px; 
-    background-color: #eee; 
-    border-top: 1px solid #aaa;
-}
-.tabcontent button{
-    position: absolute; 
-    left: 50%; 
-    bottom: 0; 
-    transform: translateX(-50%); 
-    z-index: 2; 
-    width: 95%; 
-    height: 40px;
+.tab_menu li.active{
+    font-weight: bold;
+    color: black;
 }
 
-#bookcontent .totalcon .contextbox{
+.tabcontent {
+    width: 750px;
+    height: 300px;
+    margin-right: 30px;
+    position: relative;
+    left: 0;
+    bottom: 0.5px;
+    background-color: #fff;
+    border-top: 1px solid #aaa;
+}
+
+.tabcontent button {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 95%;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+
+
+#bookcontent .totalcon .contextbox {
     width: 750px;
     /* height: 2820px; */
     position: relative;
     padding-right: 30px;
+    /* max-height: 300px; */
+    overflow: hidden;
 }
-#side_bar{
+
+.contextbox img {
+  width: 100%;
+  height: auto;
+}
+#bookcontent .totalcon .contextbox p:first-child{
+    padding: 10px 0 0 10px;
+    font-size: 20px; 
+    font-weight: 700;
+}
+#bookcontent .totalcon .contextbox p:last-child{
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+
+#side_bar {
     min-width: 360px;
     height: 235px;
     padding: 10px;
@@ -258,3 +336,17 @@ main {
     border-radius: 8px;
 }
 
+#side_bar ul li:first-child {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f6f6f9;
+}
+
+#side_bar ul li .book_title {
+    text-align: left;
+}
+
+#side_bar ul li .buy_btn {
+    display: flex;
+    justify-content: space-between;
+}
