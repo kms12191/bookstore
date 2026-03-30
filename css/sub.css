@@ -211,8 +211,24 @@ main {
 #new {
     width: 1140px;
     height: 180px;
-    background-color: yellow;
+    margin: 40px 0 50px 0;
 }
+#new .newtop{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#new .newtop h2{
+    font-size: 20px;
+}
+#new .newtop button{
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    padding: 0 5px;
+    background-color: #fff;
+}
+
 
 .swiper {
     width: 100%;
@@ -222,39 +238,88 @@ main {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #444;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .swiper-slide img {
+    margin-left: 25px;
+    margin-right: 10px;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 130px;
+    height: 145px;
     object-fit: cover;
+}
+#new h3{
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+}
+#new h4{
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: left;
+    color: #7B8A9D;
+}
+#new p{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+#new p::before{
+    content: "10%";
+    color: rgba(0, 120, 224, 1);
+}
+#new .swiper-button-next {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    left: 1090px;
+    right: auto;
+    top: auto;
+    bottom: 80px;
+    box-shadow: 0 5.5px 6.6px 0 rgba(0, 0, 0, 0.07);
+}
+
+#new .swiper-button-prev {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 0px;
+    top: auto;
+    bottom: 80px;
+    box-shadow: 0 5.5px 6.6px 0 rgba(0, 0, 0, 0.07);
+}
+#new .swiper-navigation-icon {
+    width: 50%;
+    height: 50%;
+    color: #888;
 }
 
 
 #bookcontent {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-#bookcontent section {
+/* #bookcontent section {
     width: 750px;
     height: 350px;
     margin-right: 30px;
     margin: 0 auto;
     position: relative;
-}
+} */
 
 
 .tab_menu {
     width: 750px;
     display: flex;
     justify-content: center;
-    position: relative;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
     z-index: 2;
 }
 
@@ -266,9 +331,13 @@ main {
     border-bottom: 0;
 }
 
-/* .tabs .tabcontent2{
+.tabs .tabcontent{
     display: none;
-} */
+}
+
+.tabcontent.active {
+  display: flex;
+}
 .active {
     background-color: #eee;
     border-bottom: 1px solid #eee;
@@ -278,11 +347,13 @@ main {
     color: black;
 }
 
+
 .tabcontent {
     width: 750px;
     height: 300px;
     margin-right: 30px;
     position: relative;
+    overflow: hidden;
     left: 0;
     bottom: 0.5px;
     background-color: #fff;
@@ -295,8 +366,9 @@ main {
     bottom: 0;
     transform: translateX(-50%);
     z-index: 2;
-    width: 95%;
+    width: 100px;
     height: 40px;
+    border-radius: 7px;
     background-color: #fff;
     border: 1px solid #eee;
 }
@@ -328,6 +400,7 @@ main {
 #side_bar {
     min-width: 360px;
     height: 235px;
+    margin-top: 20px;
     padding: 10px;
     position: sticky;
     top: 20px;
@@ -337,8 +410,8 @@ main {
 }
 
 #side_bar ul li:first-child {
-    margin-top: 30px;
-    padding-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #f6f6f9;
 }
 
@@ -347,6 +420,8 @@ main {
 }
 
 #side_bar ul li .buy_btn {
+    /* margin-bottom: 10px; */
+    gap: 7px;
     display: flex;
     justify-content: space-between;
 }

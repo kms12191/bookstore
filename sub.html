@@ -126,6 +126,10 @@
         </section>
 
         <div id="new">
+            <div class="newtop">
+                <h2>선생님 신규 교재</h2>
+                <button> <a href="#">최태성 선생님 신간 알림 받기 </a></button>
+            </div>
             <!-- Swiper -->
             <div class="swiper newSwiper">
                 <div class="swiper-wrapper">
@@ -152,13 +156,23 @@
                     <ul class="tab_menu">
                         <li class="active">상품 설명</li>
                         <li>기본정보</li>
+                        <li>배송/교환/반품</li>
+                        <li>분철 안내</li>
                     </ul>
-                    <div class="tabcontent">
-                        <div class="contextbox"></div>
+                    <div class="tabcontent" style="display: flex;">
+                        <div class="contextbox" id="contextbox"></div>
                         <button>더보기</button>
                     </div>
                     <div class="tabcontent">
-                        기본정보
+                        <div id="tmpBox"></div>
+                        <button>더보기</button>
+                    </div>
+                    <div class="tabcontent">
+                        <div id="delivery"></div>
+                        <button>더보기</button>
+                    </div>
+                    <div class="tabcontent">
+                        <div id="info"></div>
                         <button>더보기</button>
                     </div>
                 </div>
