@@ -108,6 +108,8 @@ async function mainBook() {
 // 탭메뉴
 const tabMenu = document.querySelectorAll('.tab_menu li');
 const tabContent = document.querySelectorAll('.tabcontent');
+const tabHeights = [300, 300, 300, 300]; // 원하는 높이
+const tabExpandHeights = [6599, 1200, 800, 900]; // 더보기 높이
 // 더보기
 const tab = document.querySelector('.tabs');
 const btns = document.querySelectorAll('.tabcontent button');
@@ -115,42 +117,94 @@ const btns = document.querySelectorAll('.tabcontent button');
 // 탭메뉴 클릭
 tabMenu.forEach((tm, i) => {
   tm.addEventListener('click', () => {
-    // 모든 탭 메뉴에서 'active' 클래스 제거
-    tabMenu.forEach(item => {
-      item.classList.remove('active');
-    });
-
-    // 클릭한 탭 메뉴에만 'active' 클래스 추가
+    tabMenu.forEach(item => item.classList.remove('active'));
     tm.classList.add('active');
 
-    // 탭에 해당하는 리스트 보이고, 나머지는 숨기기
     tabContent.forEach((tc, j) => {
-      tc.style.display = (i === j) ? 'flex' : 'none';
-      tab.style.height = '360px';
-      tc.style.height = '295px';
-      btns[i].innerText = '더보기'
+      if (i === j) {
+        tc.style.display = 'flex';
+
+        // ⭐ 1번 탭만 더보기 구조
+        if (i === 0) {
+          tc.style.height = '300px';
+          tab.style.height = '360px';
+          btns[0].innerText = '더보기';
+        } else {
+          // ⭐ 나머지 탭은 자동 높이
+          tc.style.height = 'auto';
+          tab.style.height = 'auto';
+        }
+
+      } else {
+        tc.style.display = 'none';
+      }
     });
   });
 });
 
-// 더보기 클릭
-btns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (btn.textContent == '더보기') {
-      tab.style.height = '6655px';
-      tabContent.forEach(tc => {
-        tc.style.height = '6600px';
-      });
-      btn.innerText = '접기'
-    } else {
-      tab.style.height = '360px';
-      tabContent.forEach(tc => {
-        tc.style.height = '300px';
-      });
-      btn.innerText = '더보기'
-    }
-  });
-});       
+
+btns[0].addEventListener('click', () => {
+  const tc = tabContent[0];
+
+  if (btns[0].textContent === '더보기') {
+    tc.style.height = 'auto';
+    tab.style.height = 'auto';
+    btns[0].innerText = '접기';
+  } else {
+    tc.style.height = '300px';
+    tab.style.height = '360px';
+    btns[0].innerText = '더보기';
+  }
+});
+
+
+//     tabContent.forEach((tc, j) => {
+//       if (i === j) {
+//         tc.style.display = 'flex';
+//         tc.style.height = tabHeights[i] + 'px';
+//         tab.style.height = (tabHeights[i] + 65) + 'px';
+//         btns[i].innerText = '더보기';
+//       } else {
+//         tc.style.display = 'none';
+//       }
+//     });
+//   });
+// });
+
+// btns.forEach((btn, i) => {
+//   btn.addEventListener('click', () => {
+//     const tc = tabContent[i];
+
+//     if (btn.textContent === '더보기') {
+//       tc.style.height = tabExpandHeights[i] + 'px';
+//       tab.style.height = (tabExpandHeights[i] + 65) + 'px';
+//       btn.innerText = '접기';
+//     } else {
+//       tc.style.height = tabHeights[i] + 'px';
+//       tab.style.height = (tabHeights[i] + 65) + 'px';
+//       btn.innerText = '더보기';
+//     }
+//   });
+// });
+
+// // 더보기 클릭
+// btns.forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     if (btn.textContent == '더보기') {
+//       tab.style.height = '6655px';
+//       tabContent.forEach(tc => {
+//         tc.style.height = '6600px';
+//       });
+//       btn.innerText = '접기'
+//     } else {
+//       tab.style.height = '360px';
+//       tabContent.forEach(tc => {
+//         tc.style.height = '300px';
+//       });
+//       btn.innerText = '더보기'
+//     }
+//   });
+// });       
 
 
 

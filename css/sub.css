@@ -316,7 +316,7 @@ main {
 .tab_menu {
     width: 750px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: #fff;
     position: sticky;
     top: 0;
@@ -324,9 +324,9 @@ main {
 }
 
 .tab_menu li {
-    width: 200px;
+    width: 120px;
     line-height: 50px;
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa; */
     text-align: center;
     border-bottom: 0;
 }
@@ -339,7 +339,7 @@ main {
   display: flex;
 }
 .active {
-    background-color: #eee;
+    background-color: #fff;
     border-bottom: 1px solid #eee;
 }
 .tab_menu li.active{
@@ -358,9 +358,31 @@ main {
     bottom: 0.5px;
     background-color: #fff;
     border-top: 1px solid #aaa;
+    transition: 0.3s;
+}
+.tabcontent:nth-of-type(2){
+    width: 750px;
+    height: 1500px;
+    margin-right: 30px;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    bottom: 0.5px;
+    background-color: #fff;
+    border-top: 1px solid #aaa;
 }
 
 .tabcontent button {
+    display: none;
+}
+
+/* 첫 번째 탭만 보이게 */
+/* .tabcontent:nth-of-type(1) button {
+    display: block;
+} */
+
+.tabcontent:nth-of-type(1) button {
+    display: block;
     position: absolute;
     left: 50%;
     bottom: 0;
