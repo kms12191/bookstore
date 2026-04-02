@@ -35,7 +35,7 @@ async function mainBook() {
 
                 // 데이터에서 필요한 값 추출
                 const book = data.documents[0];
-                const { title, thumbnail, authors, price, contents, sale_price, publisher } = book;
+                const { title, thumbnail, authors, price, sale_price, publisher } = book;
                 console.log(sale_price)
 
                 // 요소 생성 및 추가
